@@ -76,8 +76,13 @@ WSGI_APPLICATION = 'mdserver.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            "port": 3306,
+            "database": "ciwk_test",
+            "user": "your_database_username",
+            "password": "your_database_password",
+        },
     }
 }
 
@@ -119,3 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+try:
+    from .settings_local import *
+except ImportError as e:
+    pass
