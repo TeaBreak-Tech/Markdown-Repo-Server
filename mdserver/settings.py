@@ -78,10 +78,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {
+            "host": "106.52.175.237",
             "port": 3306,
-            "database": "ciwk_test",
-            "user": "your_database_username",
-            "password": "your_database_password",
+            "database": "mdserver",
+            "user": "www",
+            "password": "TeaBreak666!",
         },
     }
 }
@@ -125,7 +126,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-try:
-    from .settings_local import *
-except ImportError as e:
-    pass
+#try:
+#    from .settings_local import *
+#except ImportError as e:
+#    pass

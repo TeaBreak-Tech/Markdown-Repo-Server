@@ -1,8 +1,9 @@
 from django.http import HttpResponse, JsonResponse
 
-REPO = ["path_to_repo_1","path_to_repo_2"]
-try: from .repo_info import *
-except ImportError as e: pass
+#REPO = ["path_to_repo_1","path_to_repo_2"]
+#try: from .repo_info import *
+#except ImportError as e: pass
+REPO = ["/home/www/Blog"]
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
