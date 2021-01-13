@@ -77,12 +77,13 @@ WSGI_APPLICATION = 'mdserver.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        'USER': 'www',
+        'NAME': 'mdserver',
+        'PASSWORD': '111',
+        'HOST': 'localhost',
+        'PORT': '3306',
         'OPTIONS': {
-            "host": "106.52.175.237",
-            "port": 3306,
-            "database": "mdserver",
-            "user": "www",
-            "password": "TeaBreak666!",
+            'use_unicode': True,
         },
     }
 }
